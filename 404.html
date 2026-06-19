@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 · Te perdiste en el magueyal | EFÍMERO</title>
+<meta name="theme-color" content="#1b1612">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2712%27%20fill%3D%27%231b1612%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2745%27%20font-family%3D%27Georgia%2C%22Times%20New%20Roman%22%2Cserif%27%20font-size%3D%2733%27%20font-weight%3D%27500%27%20letter-spacing%3D%271%27%20fill%3D%27%23efe7d8%27%20text-anchor%3D%27middle%27%3EEF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,500&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* --- Estilos específicos para la página 404 --- */
+  .page-404 {
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    color: var(--paper);
+    text-align: center;
+    padding: 20px;
+  }
+  .bg-404 {
+    position: absolute;
+    inset: 0;
+    /* Usamos la imagen del agave en el campo */
+    background: url('assets/images/image_007.jpg') center/cover no-repeat;
+    /* Oscurecemos y le damos un toque cálido/sepia sutil */
+    filter: brightness(0.25) contrast(1.1) sepia(0.2);
+    z-index: -1;
+    transform: scale(1.05);
+  }
+  .content-404 {
+    max-width: 600px;
+    z-index: 2;
+    opacity: 0;
+    animation: rise 1.2s cubic-bezier(.22,1,.36,1) 0.3s forwards;
+  }
+  .content-404 h1 {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 500;
+    font-size: clamp(5rem, 18vw, 10rem);
+    line-height: 1;
+    color: var(--cork);
+    margin-bottom: 5px;
+    letter-spacing: -0.02em;
+  }
+  .content-404 h2 {
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+    margin-bottom: 24px;
+    color: var(--paper);
+  }
+  .content-404 p {
+    font-family: 'Spectral', serif;
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: rgba(239, 231, 216, 0.85); /* --paper con opacidad */
+    margin-bottom: 44px;
+    line-height: 1.6;
+    max-width: 42ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content-404 .btn {
+    background: var(--paper);
+    color: var(--espresso);
+    padding: 16px 42px;
+    font-size: 0.74rem;
+  }
+  .content-404 .btn:hover {
+    background: var(--cork);
+    color: var(--paper);
+    transform: translateY(-3px);
+  }
+
+  /* --- Navbar simplificado --- */
+  nav.nav-404 {
+    position: absolute;
+    background: transparent;
+    box-shadow: none;
+    padding: 30px 40px;
+  }
+  nav.nav-404 .brand-logo .lg-dark { display: none !important; }
+  nav.nav-404 .brand-logo .lg-light { display: block !important; }
+
+  @media(max-width: 680px) {
+    nav.nav-404 { padding: 22px 20px; }
+    .content-404 p { margin-bottom: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav-404">
+  <a href="/" class="brand-logo" aria-label="EFÍMERO — inicio">
+    <img class="lg-light" src="assets/images/image_025.png" alt="EFÍMERO">
+  </a>
+</nav>
+
+<div class="page-404">
+  <div class="bg-404"></div>
+  <div class="content-404">
+    <h1>404</h1>
+    <h2>Te perdiste en el magueyal</h2>
+    <p>Esta gota ya se evaporó o el camino que buscas no existe. Mejor regresemos a donde el mezcal ya está servido.</p>
+    <a href="/" class="btn">Volver al inicio</a>
+  </div>
+</div>
+
+</body>
+</html>
